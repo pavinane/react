@@ -1,0 +1,17 @@
+.App{
+    width: 1000px;
+    background: YELLOW;
+    margin: 0 auto;
+}
+.red{
+    background: red;
+    height: 100px;
+}
+.green{
+    background: green;
+    height:100px;
+}
+.blue{
+    background: blue;
+    height:100px;
+}

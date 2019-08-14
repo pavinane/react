@@ -6,9 +6,6 @@ import React from 'react';
 //   );
 // }
 
-//Arrow Function
-
-const App = ()=>(<p>hello</p>)
-
+const App = () => (<p>hello</p>);
 
 export default App;

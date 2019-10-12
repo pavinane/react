@@ -5,9 +5,7 @@ class Task extends React.Component {
         text:""
     };
    click = (num) => {this.setState ({text: num })}
-//    Click2 = () => {this.setState ({ text: 'two'})}
-//    Click3 = () => {this.setState ({text: 'three'})}
-   
+
    render () {
        const { text } = this.state
       return (

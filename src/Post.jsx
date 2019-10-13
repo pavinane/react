@@ -6,7 +6,7 @@ class Post extends React.Component {
   render() {
     return (
       <div className="post">
-        <img src="https://placeimg.com/500/500/place" alt="" />
+        <img src="https://placeimg.com/500/500/nature" alt="" />
       </div>
     );
   }

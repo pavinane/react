@@ -5,14 +5,25 @@ import Color from './Color';
 import Counter from './Counter';
 import Pic from './Pic';
 import Task from './Task';
+import Gallery from './Gallery';
+import Instagram from './Instagram';
 import './App.css';
 
-const menu = ['home', 'compo', 'counter', 'toggle', 'task'];
+const menu = [
+  'home',
+  'compo',
+  'counter',
+  'toggle',
+  'gallery',
+  'multi-btn',
+  'instagram',
+];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
     <ul>
       {menus.map((m) => (
+        // <Link to="/gallery" />
         <Link to={m === 'home' ? '/' : `/${m}`}>
           <li>{m}</li>
         </Link>
@@ -21,17 +32,16 @@ const Navigation = ({ menus }) => (
   </div>
 );
 
-const Home = () => <h3>this is home</h3>;
+const Home = () => <h3>This is Home</h3>;
 
 const Compo = () => (
   <>
     <p>Hello</p>
-    <Color title="red" />
-    <Color title="green" />
-    <Color title="blue" />
+    <Color title="Red" />
+    <Color title="Green" />
+    <Color title="BLUE" />
   </>
 );
-
 const Toggle = () => <Pic />;
 
 class App extends React.Component {
@@ -45,7 +55,9 @@ class App extends React.Component {
             <Route exact path="/compo" component={Compo} />
             <Route exact path="/counter" component={Counter} />
             <Route exact path="/toggle" component={Toggle} />
-            <Route exact path="/task" component={Task} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/multi-btn" component={Task} />
+            <Route exact path="/Instagram" component={Instagram} />
           </Switch>
         </BrowserRouter>
       </div>

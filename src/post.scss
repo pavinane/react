@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+.post-image {
+  .post {
+    // margin: 0 20px;
+    height: 500px;
+  }
+  .sym {
+    // width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    .three {
+      width: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      .like {
+        i {
+          font-size: 20px;
+          // color: black;
+        }
+        i.fas.fa-heart {
+          color: red;
+        }
+      }
+      .comment {
+        input {
+          position: relative;
+          top: 50px;
+        }
+      }
+    }
+    .book {
+      text-align: end;
+    }
+  }
+}

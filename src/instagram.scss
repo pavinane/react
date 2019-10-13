@@ -1,0 +1,29 @@
+.head {
+  width: 500px;
+  background: white;
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border-bottom: 2px solid gray;
+    .profile {
+      i {
+        font-size: 70px;
+        color: red;
+      }
+      img {
+        border-radius: 50%;
+        // position: relative;
+        // right: 60px;
+      }
+    }
+    h2 {
+      font-family: "Courier New", Courier, monospace;
+      align-self: center;
+    }
+    i {
+      text-align: end;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}

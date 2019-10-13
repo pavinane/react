@@ -1,0 +1,46 @@
+.gallery {
+  width: 1400px;
+  /* height: 620px; */
+  background: rgb(214, 74, 74);
+  display: grid;
+  grid-template-columns: 1000px 400px;
+}
+
+.main-gallery {
+  height: 500px;
+  background: lightblue;
+  position: relative;
+  margin-top: 100px;
+}
+
+.main-gallery h2 {
+  position: absolute;
+  top: 60px;
+  color: #f38080;
+  text-transform: uppercase;
+  left: 50px;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+}
+.main-gallery img {
+  width: 1000px;
+  height: 500px;
+}
+
+.option-gallery {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+  justify-items: center;
+  /* height: 100px; */
+  /* margin-top: 20px; */
+}
+
+.option-gallery img {
+  background: lightgreen;
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}

@@ -4,7 +4,7 @@
 .post-image {
   .post {
     // margin: 0 20px;
-    height: 500px;
+    height: 400px;
   }
   .sym {
     // width: 100px;
@@ -17,6 +17,7 @@
       width: 100px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 10;
       .like {
         i {
           font-size: 20px;
@@ -24,6 +25,14 @@
         }
         i.fas.fa-heart {
           color: red;
+        }
+      }
+      .share {
+        // width: 150px;
+        .option {
+          color: gray;
+          //   width: 100px;
+          padding: 10px;
         }
       }
       .comment {

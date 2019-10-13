@@ -1,10 +1,16 @@
 import React from "react";
+// // import { Route } from 'react-router-dom';
+// import Like from './Icon';
+// import Comment from './Comment';
+// import Share from './Share';
+// import Bookmark from './Bookmark';
 import "./post.scss";
+
 class Post extends React.Component {
   render() {
     return (
       <div className="post">
-        <img src="https://placeimg.com/500/500/place" alt="" />
+        <img src="https://placeimg.com/500/400/place" alt="" />
       </div>
     );
   }
@@ -30,26 +36,6 @@ class Like extends React.Component {
     );
   }
 }
-class Bookmark extends React.Component {
-  state = {
-    showIcon: false
-  };
-
-  showIc = () => this.setState(({ showIcon }) => ({ showIcon: !showIcon }));
-
-  render() {
-    const { showIcon } = this.state;
-    return (
-      <div className="bookmak">
-        <i
-          className={showIcon ? "fas fa-bookmark" : "far fa-bookmark"}
-          onClick={this.showIc}
-        ></i>
-      </div>
-    );
-  }
-}
-
 class Comment extends React.Component {
   state = {
     showIcon: false
@@ -97,6 +83,25 @@ class Share extends React.Component {
     );
   }
 }
+class Bookmark extends React.Component {
+  state = {
+    showIcon: false
+  };
+
+  showIc = () => this.setState(({ showIcon }) => ({ showIcon: !showIcon }));
+
+  render() {
+    const { showIcon } = this.state;
+    return (
+      <div className="bookmak">
+        <i
+          className={showIcon ? "fas fa-bookmark" : "far fa-bookmark"}
+          onClick={this.showIc}
+        ></i>
+      </div>
+    );
+  }
+}
 
 class PostImage extends React.Component {
   render() {
@@ -108,8 +113,8 @@ class PostImage extends React.Component {
         <div className="sym">
           <div className="three">
             <Like />
-            <Share />
             <Comment />
+            <Share />
           </div>
           <div className="book">
             <Bookmark />

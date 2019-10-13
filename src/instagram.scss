@@ -1,9 +1,11 @@
 .head {
   width: 500px;
-  background: white;
+  background: rgb(136, 132, 132);
+  margin: 0 auto;
+  height: 800px;
   .top {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 4fr 2fr;
     border-bottom: 2px solid gray;
     .profile {
       i {
@@ -13,6 +15,7 @@
       img {
         border-radius: 50%;
         // position: relative;
+        padding: 10px;
         // right: 60px;
       }
     }
@@ -24,6 +27,7 @@
       text-align: end;
       align-self: center;
       justify-self: center;
+      font-size: 25px;
     }
   }
 }

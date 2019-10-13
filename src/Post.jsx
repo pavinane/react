@@ -1,16 +1,12 @@
 import React from "react";
-// // import { Route } from 'react-router-dom';
-// import Like from './Icon';
-// import Comment from './Comment';
-// import Share from './Share';
-// import Bookmark from './Bookmark';
+
 import "./post.scss";
 
 class Post extends React.Component {
   render() {
     return (
       <div className="post">
-        <img src="https://placeimg.com/500/400/place" alt="" />
+        <img src="https://placeimg.com/500/500/place" alt="" />
       </div>
     );
   }
@@ -119,6 +115,44 @@ class PostImage extends React.Component {
           <div className="book">
             <Bookmark />
           </div>
+        </div>
+        <div className="content">
+          <div classNames="num-lk">
+            <p>
+              <b>4,740 likes</b>
+            </p>
+          </div>
+          <div className="text">
+            <p>
+              {" "}
+              <b>mokkaapost </b>
+              <i>Aga aga aaga...</i>
+              😂 😂
+              <span>more</span>
+            </p>
+            <small>View all 21 comments</small>
+          </div>
+          <div className="tag-name">
+            <div className="1">
+              <p>
+                <b>pavinane</b>
+                <i> @nane </i>
+                😍😍😍
+                <small />
+              </p>
+            </div>
+            <div className="2">
+              <p>
+                <b>iron man</b>
+                {/* <i> @nane </i> */}
+                ❤️ Watkin kdsaccoccie I've seen that waterfall it's really
+                cool!!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="comnt-section">
+          <input type="text" placeholder="Add a comment ..." />
         </div>
       </div>
     );

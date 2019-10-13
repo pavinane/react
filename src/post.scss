@@ -4,7 +4,7 @@
 .post-image {
   .post {
     // margin: 0 20px;
-    height: 400px;
+    height: 500px;
   }
   .sym {
     // width: 100px;
@@ -44,6 +44,33 @@
     }
     .book {
       text-align: end;
+    }
+  }
+  .content {
+    padding: 10px;
+    font-size: 20px;
+    .text {
+      span {
+        color: gray;
+      }
+      small {
+        color: gray;
+      }
+    }
+    .tag-name {
+      // margin-top: 20px;
+      i {
+        color: #013569;
+      }
+    }
+  }
+  .comnt-section {
+    input {
+      width: 490px;
+      height: 50px;
+      font-size: 18px;
+      border: 0.5px solid rgb(88, 86, 86);
+      padding-left: 10px;
     }
   }
 }

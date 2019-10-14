@@ -7,6 +7,7 @@ import Pic from './Pic';
 import Task from './Task';
 import Gallery from './Gallery';
 import Instagram from './Instagram';
+import Form from './Form';
 import './App.css';
 
 const menu = [
@@ -17,6 +18,7 @@ const menu = [
   'gallery',
   'multi-btn',
   'instagram',
+  'form',
 ];
 
 const Navigation = ({ menus }) => (
@@ -24,7 +26,7 @@ const Navigation = ({ menus }) => (
     <ul>
       {menus.map((m) => (
         // <Link to="/gallery" />
-        <Link to={m === 'home' ? '/' : `/${m}`}>
+        <Link key={m} to={m === 'home' ? '/' : `/${m}`}>
           <li>{m}</li>
         </Link>
       ))}
@@ -58,6 +60,7 @@ class App extends React.Component {
             <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/multi-btn" component={Task} />
             <Route exact path="/Instagram" component={Instagram} />
+            <Route exact path="/Form" component={Form} />
           </Switch>
         </BrowserRouter>
       </div>

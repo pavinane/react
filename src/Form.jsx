@@ -1,9 +1,11 @@
-import React from 'react';
-import ContactForm from './ContactForm';
+import React from "react";
+import ContactForm from "./ContactForm";
+import FormValidation from "./FormValidation";
 
-class Form extends React.Component {
-  render() {
-    return <ContactForm />;
-  }
-}
+const Form = () => (
+  <>
+    <ContactForm />
+    <FormValidation />
+  </>
+);
 export default Form;

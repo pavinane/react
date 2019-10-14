@@ -1,24 +1,26 @@
-import React from 'react';
+import React from "react";
 // eslint-disable-next-line
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Color from './Color';
-import Counter from './Counter';
-import Pic from './Pic';
-import Task from './Task';
-import Gallery from './Gallery';
-import Instagram from './Instagram';
-import Form from './Form';
-import './App.css';
+import Color from "./Color";
+import Counter from "./Counter";
+import Pic from "./Pic";
+import Task from "./Task";
+import Gallery from "./Gallery";
+import Instagram from "./Instagram";
+import Form from "./Form";
+import Fetch from "./Fetch";
+import "./App.css";
 
 const menu = [
-  'home',
-  'compo',
-  'counter',
-  'toggle',
-  'gallery',
-  'multi-btn',
-  'instagram',
-  'form',
+  "home",
+  "compo",
+  "counter",
+  "toggle",
+  "gallery",
+  "multi-btn",
+  "instagram",
+  "form",
+  "fetch",
 ];
 
 const Navigation = ({ menus }) => (
@@ -26,7 +28,7 @@ const Navigation = ({ menus }) => (
     <ul>
       {menus.map((m) => (
         // <Link to="/gallery" />
-        <Link key={m} to={m === 'home' ? '/' : `/${m}`}>
+        <Link key={m} to={m === "home" ? "/" : `/${m}`}>
           <li>{m}</li>
         </Link>
       ))}
@@ -61,6 +63,7 @@ class App extends React.Component {
             <Route exact path="/multi-btn" component={Task} />
             <Route exact path="/Instagram" component={Instagram} />
             <Route exact path="/Form" component={Form} />
+            <Route exact path="/Fetch" component={Fetch} />
           </Switch>
         </BrowserRouter>
       </div>

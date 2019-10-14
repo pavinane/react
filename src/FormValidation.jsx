@@ -6,9 +6,9 @@ const initialState = {
   password: "",
   nameError: "",
   emailError: "",
-  passwordError: "",
-  number: "",
-  numberError: ""
+  passwordError: ""
+  //   number: "",
+  //   numberError: ""
 };
 
 export default class FormValidation extends React.Component {
@@ -95,12 +95,14 @@ export default class FormValidation extends React.Component {
         <>
           <label for="phone">Enter your phone number</label>
           <input
+            value={number}
             type="tel"
             id="phone"
             name="phone"
-            pattern="[0-9]{3} - [0-9]{3}-[0-9]{4}"
             required
+            onChange={this.handleChange}
           />
+          <p style={{ color: "red" }}>{numberError}</p>
         </>
         <button type="submit">submit</button>
       </form>

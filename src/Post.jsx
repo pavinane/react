@@ -99,6 +99,17 @@ class Bookmark extends React.Component {
   }
 }
 
+const Srt = ({ sym }) => (
+  <div className="gr-4">
+    {sym.map(ic => (
+      <div className="name">
+        <b>{ic.bld}</b>
+        <i>{ic.itly}</i>
+        <d>{ic.em}</d>
+      </div>
+    ))}
+  </div>
+);
 class PostImage extends React.Component {
   render() {
     return (
@@ -118,36 +129,42 @@ class PostImage extends React.Component {
         </div>
         <div className="content">
           <div classNames="num-lk">
-            <p>
-              <b>4,740 likes</b>
-            </p>
+            <b>4,740 likes</b>
           </div>
           <div className="text">
-            <p>
-              {" "}
-              <b>mokkaapost </b>
-              <i>Aga aga aaga...</i>
-              😂 😂
-              <span>more</span>
-            </p>
+            <Srt
+              sym={[
+                {
+                  bld: "mokkapost",
+                  itly: "Aga aga aga ",
+                  em: "😂😂"
+                }
+              ]}
+            />
             <small>View all 21 comments</small>
           </div>
           <div className="tag-name">
             <div className="1">
-              <p>
-                <b>pavinane</b>
-                <i> @nane </i>
-                😍😍😍
-                <small />
-              </p>
+              <Srt
+                sym={[
+                  {
+                    bld: "pavinane",
+                    itly: "@nane",
+                    em: "😍😍😍"
+                  }
+                ]}
+              />
             </div>
             <div className="2">
-              <p>
-                <b>iron man</b>
-                {/* <i> @nane </i> */}
-                ❤️ Watkin kdsaccoccie I've seen that waterfall it's really
-                cool!!
-              </p>
+              <Srt
+                sym={[
+                  {
+                    bld: "ironman",
+                    em:
+                      "❤️ Watkin kdsaccoccie I've seen that waterfall it's reallycool"
+                  }
+                ]}
+              />
             </div>
           </div>
         </div>

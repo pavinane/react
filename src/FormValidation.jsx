@@ -6,9 +6,9 @@ const initialState = {
   password: "",
   nameError: "",
   emailError: "",
-  passwordError: ""
-  //   number: "",
-  //   numberError: ""
+  passwordError: "",
+  number: "",
+  numberError: ""
 };
 
 export default class FormValidation extends React.Component {
@@ -27,7 +27,7 @@ export default class FormValidation extends React.Component {
     let passwordError = "";
     let numberError = "";
 
-    const { name, email, password } = this.state;
+    const { name, email, password, number } = this.state;
     if (!name) {
       nameError = "Name cannot be Blank";
     }
@@ -39,8 +39,8 @@ export default class FormValidation extends React.Component {
     if (password.length <= 5) {
       passwordError = "Password should be between 5 and 10 characters";
     }
-    if (password.length < 11) {
-      passwordError = "Password should be between 5 and 10 characters";
+    if (number.length < 11) {
+      numberError = "Password should be between 5 and 10 characters";
     }
     if (nameError || emailError || passwordError || numberError) {
       this.setState({ nameError, emailError, passwordError, numberError });
@@ -93,7 +93,6 @@ export default class FormValidation extends React.Component {
         />
         <p style={{ color: "red" }}>{passwordError}</p>
         <>
-          <label for="phone">Enter your phone number</label>
           <input
             value={number}
             type="tel"

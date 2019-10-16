@@ -2,9 +2,8 @@ import React from "react";
 import "./contactform.scss";
 class ContactForm extends React.Component {
   state = {
-    // firstname="",
-    // lastname="",
-
+    firstname: "",
+    lastname: "",
     designation: "",
     remember: false,
     domain: "",

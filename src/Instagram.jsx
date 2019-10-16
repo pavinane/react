@@ -1,6 +1,6 @@
-import React from 'react';
-import Post from './Post';
-import './instagram.scss';
+import React from "react";
+import Post from "./Post";
+import "./instagram.scss";
 
 class Title extends React.Component {
   render() {

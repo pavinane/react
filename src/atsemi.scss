@@ -1,0 +1,95 @@
+.form {
+  background: #2d80b9;
+  // height: 500px;
+  .title {
+    .t1 {
+      margin: 50px 0px;
+    }
+    .atsemicolon {
+      .option {
+        // position: relative;
+        // top: 50px;
+        width: 1200px;
+        .main-btn {
+          button {
+            height: 40px;
+            background: none;
+            border: 1px solid white;
+            border-radius: 4px;
+            color: white;
+            font-size: 15px;
+            width: 160px;
+          }
+        }
+        .sh-btn {
+          width: 700px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 20px;
+          button {
+            height: 40px;
+            background: none;
+            border: 1px solid white;
+            border-radius: 4px;
+            color: white;
+            font-size: 15px;
+            width: 160px;
+          }
+        }
+      }
+      .contact {
+        margin-top: 50px;
+
+        input {
+          width: 700px;
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          height: 30px;
+          background: none;
+          font-family: Airbnb Cereal App;
+          font-size: 16px;
+          font-weight: 100;
+          border: none;
+          border-bottom: 0.5px solid #fff;
+          outline: none;
+        }
+        input[placeholder] {
+          text-transform: capitalize;
+          color: none;
+        }
+      }
+      .day {
+        margin: 50px 0px;
+        width: 360px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid white;
+        button {
+          height: 50px;
+          background: none;
+          border: none;
+          outline: none;
+          font-weight: bold;
+          text-transform: capitalize;
+          font-size: 15px;
+        }
+        button:hover {
+          background: white;
+        }
+      }
+    }
+    .sub {
+      button {
+        height: 40px;
+        width: 120px;
+        position: relative;
+        left: 600px;
+        bottom: 20px;
+        background: none;
+        border: 1px solid whitesmoke;
+        text-transform: capitalize;
+        font-size: 15px;
+      }
+    }
+  }
+}

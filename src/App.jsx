@@ -9,6 +9,7 @@ import Gallery from "./Gallery";
 import Instagram from "./Instagram";
 import Form from "./Form";
 import Fetch from "./Fetch";
+import Atsemico from "./Atsemico";
 import "./App.css";
 
 const menu = [
@@ -21,6 +22,7 @@ const menu = [
   "instagram",
   "form",
   "fetch",
+  "atsemicolon",
 ];
 
 const Navigation = ({ menus }) => (
@@ -64,6 +66,7 @@ class App extends React.Component {
             <Route exact path="/Instagram" component={Instagram} />
             <Route exact path="/Form" component={Form} />
             <Route exact path="/Fetch" component={Fetch} />
+            <Route exact path="/Atsemicolon" component={Atsemico} />
           </Switch>
         </BrowserRouter>
       </div>

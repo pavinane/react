@@ -1,28 +1,30 @@
-form {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  margin: 0 auto;
-  width: 200px;
-
-  .input-form {
+.form-input {
+  form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    text-transform: capitalize;
+    margin: 0 auto;
+    width: 200px;
+
+    .input-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      text-transform: capitalize;
+      input[placeholder] {
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
     input[placeholder] {
       text-align: center;
       text-transform: capitalize;
     }
-  }
-  input[placeholder] {
-    text-align: center;
-    text-transform: capitalize;
-  }
-  button {
-    width: 80px;
-    height: 30px;
-    text-transform: capitalize;
-    margin: 0 auto;
+    button {
+      width: 80px;
+      height: 30px;
+      text-transform: capitalize;
+      margin: 0 auto;
+    }
   }
 }

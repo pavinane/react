@@ -59,60 +59,62 @@ class ContactForm extends React.Component {
     } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="input-form">
-          <input
-            name="firstname"
+      <div className="form-input">
+        <form onSubmit={this.handleSubmit}>
+          <div className="input-form">
+            <input
+              name="firstname"
+              type="text"
+              value={firstname}
+              onChange={this.handleChange}
+              placeholder="first name"
+            />
+            <input
+              name="lastname"
+              type="text"
+              value={lastname}
+              onChange={this.handleChange}
+              placeholder="last name"
+            />
+          </div>
+          <textarea
+            name="designation"
             type="text"
-            value={firstname}
+            value={designation}
             onChange={this.handleChange}
-            placeholder="first name"
           />
-          <input
-            name="lastname"
-            type="text"
-            value={lastname}
-            onChange={this.handleChange}
-            placeholder="last name"
-          />
-        </div>
-        <textarea
-          name="designation"
-          type="text"
-          value={designation}
-          onChange={this.handleChange}
-        />
 
-        <>
-          <select name="domain" value={domain} onChange={this.handleChange}>
-            <option>Development</option>
-            <option>Design</option>
-            <option>Cloud</option>
-            <option>Layout</option>
-          </select>
-        </>
-        <input
-          name="number"
-          type="text"
-          value={number}
-          onChange={this.handleChange}
-          placeholder="enter your number"
-        />
-        <input
-          name="email"
-          type="text"
-          value={email}
-          onChange={this.handleChange}
-          placeholder="enter  your email"
-        />
-        <input
-          name="remember"
-          type="checkbox"
-          checked={remember}
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleForSubmit}>submit</button>
-      </form>
+          <>
+            <select name="domain" value={domain} onChange={this.handleChange}>
+              <option>Development</option>
+              <option>Design</option>
+              <option>Cloud</option>
+              <option>Layout</option>
+            </select>
+          </>
+          <input
+            name="number"
+            type="text"
+            value={number}
+            onChange={this.handleChange}
+            placeholder="enter your number"
+          />
+          <input
+            name="email"
+            type="text"
+            value={email}
+            onChange={this.handleChange}
+            placeholder="enter  your email"
+          />
+          <input
+            name="remember"
+            type="checkbox"
+            checked={remember}
+            onChange={this.handleChange}
+          />
+          <button onClick={this.handleForSubmit}>submit</button>
+        </form>
+      </div>
     );
   }
 }

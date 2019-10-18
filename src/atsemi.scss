@@ -56,11 +56,13 @@
         input[placeholder] {
           text-transform: capitalize;
           color: none;
+
+          font-weight: bolder;
         }
       }
       .day {
         margin: 50px 0px;
-        width: 360px;
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         border: 1px solid white;

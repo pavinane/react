@@ -48,7 +48,7 @@ class MainButton extends React.Component {
       options,
       name,
       email,
-      number,
+      mobile,
       designation,
       period,
       submit
@@ -126,9 +126,9 @@ class MainButton extends React.Component {
               placeholder="email"
             />
             <input
-              name="tel"
+              name="mobile"
               type="text"
-              value={number}
+              value={mobile}
               onChange={this.handleChange}
               placeholder="mobile number"
             />

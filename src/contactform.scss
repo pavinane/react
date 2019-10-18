@@ -11,20 +11,24 @@
       grid-template-columns: 1fr 1fr;
       grid-gap: 10px;
       text-transform: capitalize;
+
       input[placeholder] {
         text-align: center;
         text-transform: capitalize;
+        color: red;
       }
     }
-    input[placeholder] {
-      text-align: center;
-      text-transform: capitalize;
-    }
+
     button {
       width: 80px;
       height: 30px;
       text-transform: capitalize;
       margin: 0 auto;
     }
+  }
+
+  input[placeholder] {
+    text-transform: capitalize;
+    color: red;
   }
 }

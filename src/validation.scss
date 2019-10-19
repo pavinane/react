@@ -1,7 +1,17 @@
-form {
-  margin-top: 50px;
-  width: 300px;
-  input {
+.valid {
+  form {
+    width: 200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
     height: 20px;
+  }
+  input {
+    width: 300px;
+  }
+  button {
+    width: 10px;
+    margin: 0 auto;
   }
 }

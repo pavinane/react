@@ -10,6 +10,8 @@ import Instagram from "./Instagram";
 import Form from "./Form";
 import Fetch from "./Fetch";
 import Atsemico from "./Atsemico";
+import RArray from "./RArray";
+import ToDo from "./ToDo";
 import "./App.css";
 
 const menu = [
@@ -23,6 +25,8 @@ const menu = [
   "form",
   "fetch",
   "atsemicolon",
+  "RArray",
+  "ToDo",
 ];
 
 const Navigation = ({ menus }) => (
@@ -67,6 +71,8 @@ class App extends React.Component {
             <Route exact path="/Form" component={Form} />
             <Route exact path="/Fetch" component={Fetch} />
             <Route exact path="/Atsemicolon" component={Atsemico} />
+            <Route exact path="/RArray" component={RArray} />
+            <Route exact path="/ToDo" component={ToDo} />
           </Switch>
         </BrowserRouter>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./fetch.scss";
 
 class Fetch extends React.Component {
   state = {
@@ -13,7 +14,7 @@ class Fetch extends React.Component {
   render() {
     const { person, loading } = this.state;
     return (
-      <>
+      <div className="fet-exaple">
         <button type="button" onClick={this.fetchData}>
           fetch
         </button>
@@ -32,7 +33,7 @@ class Fetch extends React.Component {
             No data in the state , Click above button to fetch data from the API
           </p>
         )}
-      </>
+      </div>
     );
   }
 }
@@ -51,7 +52,7 @@ class Fetchpavi extends React.Component {
   render() {
     const { name, loading } = this.state;
     return (
-      <>
+      <div className="my user">
         <button type="button" onClick={this.fetchData}>
           schedule
         </button>
@@ -65,7 +66,7 @@ class Fetchpavi extends React.Component {
         ) : (
           <p>No data in the state</p>
         )}
-      </>
+      </div>
     );
   }
 }

@@ -67,44 +67,47 @@ export default class FormValidation extends React.Component {
       numberError
     } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          name="name"
-          type="text"
-          value={name}
-          placeholder="Enter Your Name"
-          onChange={this.handleChange}
-        />
-        <p style={{ color: "red" }}>{nameError}</p>
-        <input
-          name="email"
-          type="text"
-          value={email}
-          placeholder="Enter Your Email"
-          onChange={this.handleChange}
-        />
-        <p style={{ color: "red" }}>{emailError}</p>
-        <input
-          name="password"
-          type="password"
-          value={password}
-          placeholder="Enter Your Password"
-          onChange={this.handleChange}
-        />
-        <p style={{ color: "red" }}>{passwordError}</p>
-        <>
+      <div className="valid">
+        <form onSubmit={this.handleSubmit}>
           <input
-            value={number}
-            type="tel"
-            id="phone"
-            name="phone"
-            required
+            name="name"
+            type="text"
+            value={name}
+            placeholder="Enter Your Name"
             onChange={this.handleChange}
           />
-          <p style={{ color: "red" }}>{numberError}</p>
-        </>
-        <button type="submit">submit</button>
-      </form>
+          <p style={{ color: "red" }}>{nameError}</p>
+          <input
+            name="email"
+            type="text"
+            value={email}
+            placeholder="Enter Your Email"
+            onChange={this.handleChange}
+          />
+          <p style={{ color: "red" }}>{emailError}</p>
+          <input
+            name="password"
+            type="password"
+            value={password}
+            placeholder="Enter Your Password"
+            onChange={this.handleChange}
+          />
+          <p style={{ color: "red" }}>{passwordError}</p>
+          <>
+            <input
+              value={number}
+              type="tel"
+              id="phone"
+              name="number"
+              required
+              onChange={this.handleChange}
+              placeholder="Enter your number"
+            />
+            <p style={{ color: "red" }}>{numberError}</p>
+          </>
+          <button type="submit">submit</button>
+        </form>
+      </div>
     );
   }
 }

@@ -10,6 +10,7 @@ import Instagram from "./Instagram";
 import Form from "./Form";
 import Fetch from "./Fetch";
 import Atsemico from "./Atsemico";
+import LocalStorage from "./LocalStorage";
 import RArray from "./RArray";
 import ToDo from "./ToDo";
 import "./App.css";
@@ -27,8 +28,8 @@ const menu = [
   "atsemicolon",
   "RArray",
   "ToDo",
+  "LocalS",
 ];
-
 const Navigation = ({ menus }) => (
   <div className="navigation">
     <ul>
@@ -73,6 +74,7 @@ class App extends React.Component {
             <Route exact path="/Atsemicolon" component={Atsemico} />
             <Route exact path="/RArray" component={RArray} />
             <Route exact path="/ToDo" component={ToDo} />
+            <Route exact path="/Locals" component={LocalStorage} />
           </Switch>
         </BrowserRouter>
       </div>

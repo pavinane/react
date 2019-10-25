@@ -13,6 +13,7 @@ import Atsemico from "./Atsemico";
 import LocalStorage from "./LocalStorage";
 import RArray from "./RArray";
 import ToDo from "./ToDo";
+import Mobx from "./Mobx";
 import "./App.css";
 
 const menu = [
@@ -28,7 +29,8 @@ const menu = [
   "atsemicolon",
   "RArray",
   "ToDo",
-  "LocalS",
+  "LocalStorage",
+  "Mobx",
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -74,7 +76,8 @@ class App extends React.Component {
             <Route exact path="/Atsemicolon" component={Atsemico} />
             <Route exact path="/RArray" component={RArray} />
             <Route exact path="/ToDo" component={ToDo} />
-            <Route exact path="/Locals" component={LocalStorage} />
+            <Route exact path="/LocalStorage" component={LocalStorage} />
+            <Route exact path="/Mobx" component={Mobx} />
           </Switch>
         </BrowserRouter>
       </div>

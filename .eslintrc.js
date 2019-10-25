@@ -21,6 +21,9 @@ module.exports = {
     "import/no-named-as-default": 0,
     "import/no-named-as-default-member": 0,
     "react/prefer-stateless-function": 0,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+
     quotes: 0
   }
 };

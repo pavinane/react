@@ -13,7 +13,8 @@ import Atsemico from "./Atsemico";
 import LocalStorage from "./LocalStorage";
 import RArray from "./RArray";
 import ToDo from "./ToDo";
-import Mobx from "./Mobx";
+import Mobx from "./Mobx/Index";
+// import Redux from "./Redux";
 import "./App.css";
 
 const menu = [
@@ -30,6 +31,7 @@ const menu = [
   "RArray",
   "ToDo",
   "LocalStorage",
+  "Redux",
   "Mobx",
 ];
 const Navigation = ({ menus }) => (
@@ -78,6 +80,7 @@ class App extends React.Component {
             <Route exact path="/ToDo" component={ToDo} />
             <Route exact path="/LocalStorage" component={LocalStorage} />
             <Route exact path="/Mobx" component={Mobx} />
+            {/* <Route exact path="/Redux" component={Redux} /> */}
           </Switch>
         </BrowserRouter>
       </div>

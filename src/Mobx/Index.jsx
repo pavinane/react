@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MobxCounter from "./MobxCounter";
-import counterStore from "./MObxStore";
+import counterStore from "./MobxStore";
 import Calculation from "./Calculation";
 import CalculationStore from "./CalculationStore";
 

@@ -24,7 +24,7 @@ const calculationStore = observable({
   firstValue: action((valueThree) => {
     calculationStore.valueThree = valueThree;
   }),
-  secondVAlue: action((valueFour) => {
+  secondValue: action((valueFour) => {
     calculationStore.valueFour = valueFour;
   }),
 });

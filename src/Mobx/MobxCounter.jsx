@@ -8,7 +8,7 @@ const MobxCounter = ({ store }) => (
       +
     </button>
     <p>{store.count}</p>
-    <button type="button" onClick={store.decreemnt}>
+    <button type="button" onClick={store.decrement}>
       -
     </button>
     <p>{store.countByThree}</p>

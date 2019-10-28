@@ -5,7 +5,8 @@ const calculationStore = observable({
   valueTwo: "",
   valueThree: "",
   valueFour: "",
-
+  valueFive: "",
+  valueSix: "",
   get multiplication() {
     return this.valueOne * this.valueTwo;
   },
@@ -26,6 +27,16 @@ const calculationStore = observable({
   }),
   secondValue: action((valueFour) => {
     calculationStore.valueFour = valueFour;
+  }),
+  get substraction() {
+    return Number(this.valueFive) - Number(this.valueSix);
+  },
+
+  thirdValue: action((valueFive) => {
+    calculationStore.valueFive = valueFive;
+  }),
+  fourValue: action((valueSix) => {
+    calculationStore.valueSix = valueSix;
   }),
 });
 

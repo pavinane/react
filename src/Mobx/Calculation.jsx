@@ -28,6 +28,18 @@ const Calculation = ({ store }) => (
       type="text"
     />
     <h3>{store.addition}</h3>
+    <h1>Substraction Example with Mobx | Reactive</h1>
+    <input
+      onChange={(e) => store.thirdValue(e.target.value)}
+      name="valueFive"
+      type="text"
+    />
+    <input
+      onChange={(e) => store.fourValue(e.target.value)}
+      name="valueSix"
+      type="text"
+    />
+    <h3>{store.substraction}</h3>
   </div>
 );
 

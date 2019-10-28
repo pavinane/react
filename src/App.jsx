@@ -14,7 +14,7 @@ import LocalStorage from "./LocalStorage";
 import RArray from "./RArray";
 import ToDo from "./ToDo";
 import Mobx from "./Mobx/Index";
-// import Redux from "./Redux";
+import Redux from "./Redux";
 import "./App.css";
 
 const menu = [
@@ -32,12 +32,12 @@ const menu = [
   "ToDo",
   "LocalStorage",
   "Redux",
-  "Mobx",
+  "Mobx"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
     <ul>
-      {menus.map((m) => (
+      {menus.map(m => (
         // <Link to="/gallery" />
         <Link key={m} to={m === "home" ? "/" : `/${m}`}>
           <li>{m}</li>
@@ -80,7 +80,7 @@ class App extends React.Component {
             <Route exact path="/ToDo" component={ToDo} />
             <Route exact path="/LocalStorage" component={LocalStorage} />
             <Route exact path="/Mobx" component={Mobx} />
-            {/* <Route exact path="/Redux" component={Redux} /> */}
+            <Route exact path="/Redux" component={Redux} />
           </Switch>
         </BrowserRouter>
       </div>

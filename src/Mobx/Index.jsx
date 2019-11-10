@@ -3,6 +3,8 @@ import MobxCounter from "./MobxCounter";
 import counterStore from "./MobxStore";
 import Calculation from "./Calculation";
 import CalculationStore from "./CalculationStore";
+import MobxTodo from "./MobxTodo";
+import MobxtodoStore from "./MobxtodoStore";
 
 class Mobx extends Component {
   render() {
@@ -10,6 +12,7 @@ class Mobx extends Component {
       <>
         <MobxCounter store={counterStore} />
         <Calculation store={CalculationStore} />
+        <MobxTodo store={MobxtodoStore} />
       </>
     );
   }

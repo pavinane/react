@@ -13,6 +13,9 @@ class Task extends React.Component {
     return (
       <div className="button">
         <div className="click">
+          <button className="button" onClick={() => this.click("one")}>
+            one
+          </button>
           <button className="button" onClick={() => this.click("two")}>
             two
           </button>

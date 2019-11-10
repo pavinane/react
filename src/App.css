@@ -7,10 +7,9 @@ body {
   /* background: gray; */
 }
 .navigation {
-  /* width: 1150px; */
   height: 60px;
   background: rgb(184, 177, 177);
-  color: #fff;
+
   margin-bottom: 100px;
 }
 ul {
@@ -28,7 +27,7 @@ li {
   text-transform: capitalize;
 }
 a {
-  color: #fff;
+  color: rgb(233, 27, 27);
 }
 
 a:hover {

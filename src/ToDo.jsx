@@ -1,12 +1,13 @@
 import React from "react";
 import shortid from "shortid";
 import "./todo.scss";
+
 class TodoForm extends React.Component {
   state = {
     todoText: ""
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => this.setState({ todoText: e.target.value });
 
   handleSubmit = e => {
     e.preventDefault();
@@ -75,7 +76,7 @@ class TodoList extends React.Component {
   };
 
   addTodo = todo => {
-    this.setState(({ todos }) => ({ todos: [todo, ...todos] })); //spar
+    this.setState(({ todos }) => ({ todos: [todo, ...todos] })); //spred syntax
   };
 
   completeTodo = id => {

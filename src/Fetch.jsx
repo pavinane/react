@@ -41,7 +41,6 @@ class Fetch extends React.Component {
 class Fetchpavi extends React.Component {
   state = {
     loading: true,
-    person: null,
     name: ""
   };
   fetchData = () => {

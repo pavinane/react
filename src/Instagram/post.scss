@@ -4,7 +4,13 @@
 .post-image {
   .post {
     // margin: 0 20px;
-    height: 500px;
+
+    .posting {
+      img {
+        width: 99.7%;
+        margin: 0 1px;
+      }
+    }
   }
   .sym {
     // width: 100px;
@@ -49,7 +55,8 @@
   .content {
     padding: 10px;
     font-size: 20px;
-    border-bottom: 0.5px solid gray;
+    border-bottom: 1px solid #dbd6d6;
+
     font-family: sans-serif;
     .text {
       span {
@@ -68,11 +75,12 @@
   }
   .comnt-section {
     input {
-      width: 490px;
+      width: 98.5%;
       height: 50px;
       font-size: 18px;
-      border: 0.1px solid gray;
+      // border: 0.1px solid gray;
       padding-left: 10px;
+      border: none;
     }
   }
 }

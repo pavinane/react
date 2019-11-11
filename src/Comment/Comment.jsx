@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { uid } from "react-uid";
 import shortid from "shortid";
-
-const users = ["chaal", "pritam", "ashok", "sathish", "pavi"];
+// import "./comment.css";
+const users = ["chaal", "pritam", "ashol", "pavi", "sathish"];
 
 export class CommentSelectUser extends Component {
   state = {
@@ -33,13 +33,13 @@ export class CommentInputForm extends Component {
   state = {
     comment: "",
     inputTime: "",
-    btnDisable: true
+    btnDisplay: true
   };
 
   handleChange = e =>
     this.setState({
       comment: e.target.value,
-      btnDisable: e.target.value ? false : true
+      btnDisplay: e.target.value ? false : true
     });
 
   handleSubmit = e => {
@@ -50,21 +50,21 @@ export class CommentInputForm extends Component {
       commentId: shortid.generate(),
       time: new Date().toLocaleString()
     });
-    this.setState({ comment: "", btnDisable: true });
+    this.setState({ comment: "", btnDisplay: true });
   };
 
   render() {
-    const { comment, btnDisable } = this.state;
+    const { comment, btnDisplay } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <input
           type="text"
           name="comment"
           value={comment}
-          placeholder="Add a comment..."
+          palcehollder="Add a comment..."
           onChange={this.handleChange}
         />
-        <button type="submit" disabled={btnDisable}>
+        <button type="submit" disabled={btnDisplay}>
           Post
         </button>
       </form>
@@ -77,6 +77,7 @@ export class CommentLikeButton extends Component {
     liked: false,
     count: 0
   };
+
   likeIncrementCounter = () =>
     this.setState(({ count }) => ({ count: count + 1, liked: true }));
 
@@ -98,7 +99,6 @@ export class CommentLikeButton extends Component {
     );
   }
 }
-
 export class CommentsCard extends Component {
   state = {
     reply: false
@@ -128,4 +128,10 @@ export class CommentsCard extends Component {
       </div>
     );
   }
+}
+
+export class UserLike extends Component {
+  state = {
+    heart: []
+  };
 }

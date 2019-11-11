@@ -23,6 +23,7 @@ module.exports = {
     "react/prefer-stateless-function": 0,
     "import/prefer-default-export": 0,
     "import/no-unresolved": 0,
+    "max-classes-per-file": 0,
 
     quotes: 0
   }

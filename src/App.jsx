@@ -6,7 +6,7 @@ import Counter from "./Counter";
 import Pic from "./Pic";
 import Task from "./Task";
 import Gallery from "./Gallery";
-import Instagram from "./Instagram";
+import Instagram from "./Instagram/Instagram";
 import Form from "./Form";
 import Fetch from "./Fetch";
 import Atsemico from "./Atsemico";

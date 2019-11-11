@@ -5,8 +5,8 @@ import "./post.scss";
 class Post extends React.Component {
   render() {
     return (
-      <div className="post">
-        <img src="https://placeimg.com/500/500/nature" alt="" />
+      <div className="posting">
+        <img src="https://placeimg.com/500/500/IronMan" alt="" />
       </div>
     );
   }
@@ -51,34 +51,34 @@ class Comment extends React.Component {
     );
   }
 }
-class Share extends React.Component {
-  state = {
-    showIcon: false
-  };
-  showIc = () => this.setState(({ showIcon }) => ({ showIcon: !showIcon }));
+// class Share extends React.Component {
+//   state = {
+//     showIcon: false
+//   };
+//   showIc = () => this.setState(({ showIcon }) => ({ showIcon: !showIcon }));
 
-  render() {
-    const { showIcon } = this.state;
-    return (
-      <div className="share">
-        <i
-          className={
-            showIcon ? "fab fa-telegram-plane" : "fab fa-telegram-plane"
-          }
-          onClick={this.showIc}
-        ></i>
-        {showIcon && (
-          <div className="option">
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fas fa-link"></i>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+//   render() {
+//     const { showIcon } = this.state;
+//     return (
+//       <div className="share">
+//         <i
+//           className={
+//             showIcon ? "fab fa-telegram-plane" : "fab fa-telegram-plane"
+//           }
+//           onClick={this.showIc}
+//         ></i>
+//         {showIcon && (
+//           <div className="option">
+//             <i class="fab fa-whatsapp"></i>
+//             <i class="fab fa-facebook-f"></i>
+//             <i class="fab fa-twitter"></i>
+//             <i class="fas fa-link"></i>
+//           </div>
+//         )}
+//       </div>
+//     );
+//   }
+// }
 class Bookmark extends React.Component {
   state = {
     showIcon: false
@@ -121,7 +121,7 @@ class PostImage extends React.Component {
           <div className="three">
             <Like />
             <Comment />
-            <Share />
+            {/* <Share /> */}
           </div>
           <div className="book">
             <Bookmark />

@@ -1,0 +1,93 @@
+.head {
+  position: relative;
+  bottom: 100px;
+  .navi {
+    border-bottom: 1px solid gray;
+    // background-color: red;
+    .navi-card {
+      // background-color: red;
+      height: 100px;
+      margin: 0 300px;
+      // width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      .insta-icons {
+        word-spacing: 0px;
+        justify-self: start;
+        h1 {
+          font-size: 35px;
+          i.fa.fa-minus {
+            transform: rotate(90deg);
+            font-size: 40px;
+          }
+        }
+      }
+      .search {
+        input {
+          width: 250px;
+          height: 30px;
+          border-radius: 5px;
+          border: 1px solid rgb(236, 233, 233);
+          outline: none;
+          background-color: #fafafa;
+        }
+        input[type="text"] {
+          text-align: center;
+          text-transform: capitalize;
+          font-size: 18px;
+        }
+      }
+
+      .creaters {
+        width: 200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-self: end;
+        font-size: 30px;
+      }
+    }
+  }
+  .contain {
+    width: 1500px;
+    display: grid;
+    grid-template-columns: 1150px 350px;
+    .right-card {
+      border: 1px solid #dbd6d6;
+      width: 800px;
+      display: grid;
+      position: relative;
+      top: 50px;
+      left: 300px;
+      .top {
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 4fr 2fr;
+
+        .profile {
+          i {
+            font-size: 70px;
+            color: red;
+          }
+          img {
+            border-radius: 50%;
+            // position: relative;
+            padding: 10px;
+            // right: 60px;
+          }
+        }
+        h2 {
+          font-family: "Courier New", Courier, monospace;
+          align-self: center;
+        }
+        i {
+          text-align: end;
+          align-self: center;
+          justify-self: center;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

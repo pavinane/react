@@ -1,0 +1,72 @@
+input,
+button {
+  outline: none;
+}
+
+.comment {
+  width: 615px;
+  height: 60px;
+  margin: 0 auto;
+  /* border: 0.5px solid #ddd;
+    border-radius: 2px; */
+}
+
+.comment form {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  border-bottom: 0.5px solid #eaeaea;
+  margin: 10px;
+  height: 40px;
+}
+
+.comment form input {
+  border: 0;
+  font-size: 14px;
+  color: #eaeaea;
+  padding-left: 10px;
+}
+
+.comment form input:focus {
+  border: 0;
+  font-size: 14px;
+  color: #000;
+}
+
+.comment form button {
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  background: black;
+}
+
+.comment form button:disabled {
+  border: 0;
+  cursor: auto;
+  font-size: 14px;
+  color: #000;
+  background: #eaeaea;
+}
+
+.comments .c-block {
+  display: grid;
+  grid-template-columns: 20fr 1fr;
+  margin: 25px 10px;
+}
+
+.c-left p {
+  font-weight: normal;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.c-left p span {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.c-right p {
+  text-align: right;
+  align-self: center;
+  font-size: 12px;
+  cursor: pointer;
+}

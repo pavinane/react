@@ -2,7 +2,7 @@ import React from "react";
 import Post from "./Post";
 import "./instagram.scss";
 import Leftcard from "./Leftcard";
-
+import prfimg from "./ImagesInsta/vijay.jpg";
 // import { Route } from "react-router-dom";
 
 class Title extends React.Component {
@@ -39,7 +39,7 @@ class Title extends React.Component {
             <div className="top">
               <div className="profile">
                 {/* <i className="far fa-circle" /> */}
-                <img src="https://placeimg.com/50/50/place" alt="" />
+                <img src={prfimg} alt="" />
               </div>
               <h2>nane pavi </h2>
               <i className="fas fa-ellipsis-h" />

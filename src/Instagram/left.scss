@@ -1,13 +1,14 @@
 .left-card {
-  //   position: fixed;
-  position: relative;
-  top: 50px;
+  position: fixed;
+
   .cards {
     display: grid;
     grid-gap: 15px;
-    grid-template-rows: 60px 1fr 1fr 100px;
+    grid-template-rows: 60px 1fr 1fr 40px;
     width: 350px;
     height: 700px;
+    position: relative;
+    top: 50px;
     .Dp {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -15,6 +16,7 @@
       .pic {
         img {
           border-radius: 50%;
+          width: 60px;
         }
       }
       .U-name {
@@ -102,12 +104,12 @@
           }
           .stry-name {
             h2 {
-              font-size: 15px;
+              font-size: 17px;
               text-transform: capitalize;
             }
             small {
               text-transform: capitalize;
-              font-size: 13px;
+              font-size: 15px;
               color: #b4a7a7;
             }
           }
@@ -121,12 +123,20 @@
     }
     .pavi {
       ul {
+        margin: 0 25px;
         li {
           white-space: nowrap;
           list-style-type: disc;
-          font-size: 10px;
+          font-size: 13px;
+          margin: 10px 10px;
+          color: #9a9a9a;
+          line-height: 1px;
         }
       }
+    }
+    .company {
+      padding: 10px 10px;
+      color: #9a9a9a;
     }
   }
 }

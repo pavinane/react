@@ -1,5 +1,5 @@
 import React from "react";
-
+import prfimg from "./ImagesInsta/vijay.jpg";
 import "./post.scss";
 
 class Post extends React.Component {

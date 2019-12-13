@@ -1,18 +1,16 @@
 .head {
   position: relative;
-  bottom: 100px;
+  bottom: 130px;
   .navi {
     border-bottom: 1px solid gray;
     // background-color: red;
     .navi-card {
-      // background-color: red;
-      height: 100px;
-      margin: 0 300px;
-      // width: 1000px;
+      height: 83px;
+      margin: 12px 300px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
       justify-items: center;
+      align-items: end;
       .insta-icons {
         word-spacing: 0px;
         justify-self: start;
@@ -63,7 +61,7 @@
       .top {
         background-color: #fff;
         display: grid;
-        grid-template-columns: 1fr 4fr 2fr;
+        grid-template-columns: 100px 600px 100px;
 
         .profile {
           i {
@@ -73,6 +71,7 @@
           img {
             border-radius: 50%;
             // position: relative;
+            width: 50px;
             padding: 10px;
             // right: 60px;
           }
@@ -82,9 +81,8 @@
           align-self: center;
         }
         i {
-          text-align: end;
           align-self: center;
-          justify-self: center;
+          margin: 0 auto;
           font-size: 25px;
         }
       }

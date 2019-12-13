@@ -16,7 +16,11 @@ import ToDo from "./ToDo";
 import Mobx from "./Mobx/Index";
 import Redux from "./Redux";
 import Comment from "./Comment/Index";
+import CrudWoHooks from "./CrudWoHooks/addUserForm";
+import CrudHooks from "./CrudHooks/AddUserForm";
+import Hooks from "./Hooks/Hooksbasic";
 import "./App.css";
+// import HooksForm from "./Hooks/Hooksform";
 
 const menu = [
   "home",
@@ -35,11 +39,15 @@ const menu = [
   "Redux",
   "Mobx",
   "Comment",
+  "CrudeWoHooks",
+  "CrudeHooks",
+  "hooks",
+  "hooksform"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
     <ul>
-      {menus.map((m) => (
+      {menus.map(m => (
         // <Link to="/gallery" />
         <Link key={m} to={m === "home" ? "/" : `/${m}`}>
           <li>{m}</li>
@@ -86,6 +94,10 @@ class App extends React.Component {
             <Route exact path="/Mobx" component={Mobx} />
             <Route exact path="/Redux" component={Redux} />
             <Route exact path="/Comment" component={Comment} />
+            <Route exact path="/hooks" component={Hooks} />
+            {/* <Route exact path="/hooksform" component={Hooksform} /> */}
+            <Route exact path="/CrudeWoHooks" component={CrudWoHooks} />
+            <Route exact path="/CrudeHooks" component={CrudHooks} />
           </Switch>
         </BrowserRouter>
       </div>

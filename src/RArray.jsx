@@ -8,7 +8,7 @@ class RArray extends React.Component {
 
   fetchData = () => {
     fetch("https://api.randomuser.me/?results=10")
-      .then(responce => responce.json())
+      .then(response => response.json())
       .then(data => this.setState({ person: data.results, loading: false }));
   };
   render() {

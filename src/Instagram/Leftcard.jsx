@@ -1,5 +1,6 @@
 import React from "react";
 import "./left.scss";
+import prfimg from "./ImagesInsta/vijay.jpg";
 
 const Gimages = ({
  image, h2, small, p 
@@ -22,7 +23,7 @@ class Leftcards extends React.Component {
         <div className="cards">
           <div className="Dp">
             <div className="pic">
-              <img src="https://placeimg.com/60/60/place" alt="" />
+              <img src={prfimg} alt="" />
             </div>
             <div className="U-name">
               <h2>nanepavi97</h2>
@@ -57,6 +58,11 @@ class Leftcards extends React.Component {
               <li>hashtags</li>
               <li>LANGUAGE</li>
             </ul>
+          </div>
+          <div className="company">
+            <div className="company">
+              <p>© 2019 INSTAGRAM</p>
+            </div>
           </div>
         </div>
       </div>

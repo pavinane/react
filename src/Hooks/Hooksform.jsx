@@ -43,3 +43,22 @@ export const userInputValue = val => {
 };
 
 export default HooksForm;
+
+const Try = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+
+  return (
+    <div>
+      <button type="button" onClick={increment}>
+        +
+      </button>
+      <p>{count}</p>
+      <button type="button" onClick={decrement}>
+        -
+      </button>
+    </div>
+  );
+};

@@ -6,6 +6,8 @@ const HooksBasic = () => (
     <HooksMultiCounter />
     <HooksDisplay />
     <HooksArray />
+    <Like />
+    <Comment />
   </>
 );
 
@@ -44,6 +46,9 @@ const HooksMultiCounter = () => {
       <button type="button" onClick={() => Click("three")}>
         three
       </button>
+      <button type="button" onClick={() => Click("")}>
+        result
+      </button>
       <p>{text}</p>
     </div>
   );
@@ -66,18 +71,21 @@ const HooksDisplay = () => {
 
 const HooksArray = () => {
   const [person, setPerson] = useState();
-  const [loading, setLoading] = useState(true);
+  const [load, setLoad] = useState(true);
+
   useEffect(() => {
     fetch("https://api.randomuser.me/?results=10")
       .then(response => response.json())
-      .then(data => setPerson(data.results[1]));
+      .then(data => setPerson(data.results[0]));
+
+    // .then(data => setLoading(data.loading : false ));
   }, []);
   return (
     <div>
-      <button type="button" onClick={useEffect}>
+      <button type="button" onClick={setLoad}>
         Show
       </button>
-
+      {load && <p>loading...</p>}
       {person ? (
         <>
           <p>{person.name.title}</p>
@@ -94,4 +102,32 @@ const HooksArray = () => {
     </div>
   );
 };
+
 export default HooksBasic;
+
+const Like = () => {
+  const [like, setLike] = useState(false);
+
+  return (
+    <div className="like">
+      <i
+        className={like ? "fas fa-heart" : "far fa-heart"}
+        onClick={() => setLike(!like)}
+      ></i>
+    </div>
+  );
+};
+
+const Comment = () => {
+  const [comment, setComment] = useState(false);
+
+  return (
+    <div className="comment">
+      <i
+        className={comment ? "far fa-comment" : "far fa-comment"}
+        onClick={() => setComment(!comment)}
+      ></i>
+      {comment && <input type="pavi" />}
+    </div>
+  );
+};

@@ -44,37 +44,91 @@ import React, { useState } from "react";
 
 // export default HooksForm;
 
-// const Try = () => {
-//   const [count, setCount] = useState(0);
-
-//   const increment = () => setCount(count + 1);
-//   const decrement = () => setCount(count - 1);
-
+// export const useInputValue = val => {
+//   const [value, setValue] = useState(val);
+//   return {
+//     value,
+//     onChange: e => setValue(e.target.value)
+//   };
+// };
+// const HooksForm = () => {
+//   const user = useInputValue("");
+//   const email = useInputValue("");
 //   return (
-//     <div>
-//       <button type="button" onClick={increment}>
-//         +
-//       </button>
-//       <p>{count}</p>
-//       <button type="button" onClick={decrement}>
-//         -
-//       </button>
-//     </div>
+//     <>
+//       <form>
+//         <input
+//           name="user"
+//           type="text"
+//           {...user}
+//           value={user}
+//           placeholder="Enter Your Username"
+//         />
+//         <p>{user.value}</p>
+//         <input
+//           name="email"
+//           type="email"
+//           {...email}
+//           value={email}
+//           placeholder="Enter Your passowrd"
+//         />
+//         <button
+//           type="submit"
+//           onClick={e => {
+//             e.preventDefault();
+//             console.log(user.value, email.value);
+//           }}
+//         >
+//           Submit
+//         </button>
+//         <p>{email.value}</p>
+//       </form>
+//     </>
 //   );
 // };
 
-const InputForm = () => {
-  const [username, setUsername] = useState("");
+// export default HooksForm;
+
+export default () => {
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
+  const submitValue = () => {
+    const frmdetails = {
+      "First Name": fName,
+      "Last Name": lName,
+      Phone: phone,
+      Email: email
+    };
+    console.log(frmdetails);
+  };
+
   return (
-    <div className="input">
+    <>
+      <hr />
       <input
         type="text"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
+        placeholder="First Name"
+        onChange={e => setfName(e.target.value)}
       />
-      {/* <button type="submit">submit</button> */}
-    </div>
+      <input
+        type="text"
+        placeholder="Last Name"
+        onChange={e => setlName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Phone"
+        onChange={e => setPhone(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Email"
+        onChange={e => setEmail(e.target.value)}
+      />
+      <button onClick={submitValue}>Submit</button>
+    </>
   );
 };
-
-export default InputForm;

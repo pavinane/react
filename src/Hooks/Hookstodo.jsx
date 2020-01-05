@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Todo({ todo, index, completeTodo, removeTodo }) {
+const Todo = ({ todo, index, completeTodo, removeTodo }) => {
   return (
     <div
       className="todo"
@@ -14,7 +14,7 @@ function Todo({ todo, index, completeTodo, removeTodo }) {
       </div>
     </div>
   );
-}
+};
 
 function TodoForm({ addTodo }) {
   const [value, setValue] = useState("");
@@ -24,6 +24,7 @@ function TodoForm({ addTodo }) {
     if (!value) return;
     addTodo(value);
     setValue("");
+    console.log(value);
   };
 
   return (
@@ -34,6 +35,9 @@ function TodoForm({ addTodo }) {
         value={value}
         onChange={e => setValue(e.target.value)}
       />
+      <button type="submit" onClick={() => setValue(value)}>
+        button
+      </button>
     </form>
   );
 }

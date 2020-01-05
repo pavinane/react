@@ -20,7 +20,8 @@ import CrudWoHooks from "./CrudWoHooks/addUserForm";
 import CrudHooks from "./CrudHooks/AddUserForm";
 import Hooks from "./Hooks/Hooksbasic";
 import "./App.css";
-// import HooksForm from "./Hooks/Hooksform";
+import HooksForm from "./Hooks/Hooksform";
+import HooksTodo from "./Hooks/Hookstodo";
 
 const menu = [
   "home",
@@ -42,7 +43,8 @@ const menu = [
   "CrudeWoHooks",
   "CrudeHooks",
   "hooks",
-  "hooksform"
+  "hooksform",
+  "hookstodo"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -95,7 +97,8 @@ class App extends React.Component {
             <Route exact path="/Redux" component={Redux} />
             <Route exact path="/Comment" component={Comment} />
             <Route exact path="/hooks" component={Hooks} />
-            {/* <Route exact path="/hooksform" component={Hooksform} /> */}
+            <Route exact path="/hooksform" component={HooksForm} />
+            <Route exact path="/hookstodo" component={HooksTodo} />
             <Route exact path="/CrudeWoHooks" component={CrudWoHooks} />
             <Route exact path="/CrudeHooks" component={CrudHooks} />
           </Switch>

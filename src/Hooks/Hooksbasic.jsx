@@ -8,6 +8,7 @@ const HooksBasic = () => (
     <HooksArray />
     <Like />
     <Comment />
+    <Button />
   </>
 );
 
@@ -130,4 +131,13 @@ const Comment = () => {
       {comment && <input type="pavi" />}
     </div>
   );
+};
+
+const Button = () => {
+  const [buttonText, setButtonText] = useState("click me please");
+
+  function handleClick() {
+    return setButtonText("Thanks, been clicked!");
+  }
+  return <button onClick={handleClick}>{buttonText}</button>;
 };

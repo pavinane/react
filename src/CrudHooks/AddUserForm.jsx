@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddUserForm = () => {
+const AddUserForm = ({ addUser }) => {
   const initialFormState = { id: null, name: "", username: "" };
   const [user, setUser] = useState(initialFormState);
 
@@ -16,8 +16,9 @@ const AddUserForm = () => {
         event.preventDefault();
         if (!user.name || !user.username) return;
 
-        // addUser(user);
-        // setUser(initialFormState);
+        addUser(user);
+
+        setUser(initialFormState);
       }}
     >
       <label>Name</label>
@@ -36,7 +37,7 @@ const AddUserForm = () => {
         value={user.username}
         onChange={handleInputChange}
       />
-      <button type="submit" Add new user></button>
+      <button type="submit">Add new user</button>
     </form>
   );
 };

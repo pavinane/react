@@ -34,7 +34,7 @@ class AddUserForm extends Component {
           value={this.state.name}
           onChange={this.handleInputChange}
         />
-        <label> Username</label>
+        <label>Username</label>
         <input
           type="text"
           name="username"

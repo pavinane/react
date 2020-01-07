@@ -94,17 +94,21 @@ export default () => {
   const [lName, setlName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-
+  const [remember, setRemember] = useState(false);
   const submitValue = () => {
     const frmdetails = {
       "First Name": fName,
       "Last Name": lName,
       Phone: phone,
-      Email: email
+      Email: email,
+      Remember: remember
     };
     console.log(frmdetails);
   };
-
+  const handleChange = event => {
+    const Checkbox = event.target.type === "checkbox";
+    setRemember({ [event.target.name]: Checkbox });
+  };
   return (
     <>
       <hr />
@@ -128,7 +132,62 @@ export default () => {
         placeholder="Email"
         onChange={e => setEmail(e.target.value)}
       />
+      <input
+        name="remember"
+        type="checkbox"
+        checked={remember}
+        onChange={handleChange}
+      />
+
       <button onClick={submitValue}>Submit</button>
     </>
   );
 };
+
+// function App() {
+//   const [dataSubmit, setDataSubmit] = useState({});
+//   const { handleSubmit, register } = useForm();
+
+//   const onSubmit = e => {
+//     setDataSubmit(e);
+//     console.log(e);
+//   };
+
+//   return (
+//     <>
+//       {/* <p>{JSON.stringify(dataSubmit)}</p> */}
+//       <form>
+//         <label>
+//           <input
+//             type="checkbox"
+//             value="pavi"
+//             name={dataSubmit}
+//             ref={register}
+//             onClick={handleSubmit(onSubmit)}
+//           />
+//           checkbox 1
+//         </label>
+//         <label>
+//           <input
+//             type="checkbox"
+//             value="nane"
+//             name={dataSubmit}
+//             ref={register}
+//             onClick={handleSubmit(onSubmit)}
+//           />
+//           checkbox 2
+//         </label>
+//         <label>
+//           <input
+//             type="checkbox"
+//             value="pavinane"
+//             name={dataSubmit}
+//             ref={register}
+//             onClick={handleSubmit(onSubmit)}
+//           />
+//           checkbox 3
+//         </label>
+//       </form>
+//     </>
+//   );
+// }

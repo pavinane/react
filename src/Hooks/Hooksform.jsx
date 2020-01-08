@@ -111,7 +111,6 @@ export default () => {
   };
   return (
     <>
-      <hr />
       <input
         type="text"
         placeholder="First Name"
@@ -140,54 +139,38 @@ export default () => {
       />
 
       <button onClick={submitValue}>Submit</button>
+      <Form />
     </>
   );
 };
 
-// function App() {
-//   const [dataSubmit, setDataSubmit] = useState({});
-//   const { handleSubmit, register } = useForm();
+function Form() {
+  const [state, setState] = React.useState({
+    hooks: true
+  });
 
-//   const onSubmit = e => {
-//     setDataSubmit(e);
-//     console.log(e);
-//   };
+  function handleChange(evt) {
+    const value =
+      evt.target.type === "checkbox" ? evt.target.checked : evt.target.type;
+    setState({
+      ...state,
+      [evt.target.name]: value
+    });
+    console.log(value);
+  }
 
-//   return (
-//     <>
-//       {/* <p>{JSON.stringify(dataSubmit)}</p> */}
-//       <form>
-//         <label>
-//           <input
-//             type="checkbox"
-//             value="pavi"
-//             name={dataSubmit}
-//             ref={register}
-//             onClick={handleSubmit(onSubmit)}
-//           />
-//           checkbox 1
-//         </label>
-//         <label>
-//           <input
-//             type="checkbox"
-//             value="nane"
-//             name={dataSubmit}
-//             ref={register}
-//             onClick={handleSubmit(onSubmit)}
-//           />
-//           checkbox 2
-//         </label>
-//         <label>
-//           <input
-//             type="checkbox"
-//             value="pavinane"
-//             name={dataSubmit}
-//             ref={register}
-//             onClick={handleSubmit(onSubmit)}
-//           />
-//           checkbox 3
-//         </label>
-//       </form>
-//     </>
-//   );
-// }
+  return (
+    <form>
+      <label>
+        With hooks
+        <input
+          type="checkbox"
+          name="hooks"
+          value={state}
+          checked={state.hooks}
+          onChange={handleChange}
+        />
+      </label>
+    </form>
+  );
+}

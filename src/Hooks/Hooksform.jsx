@@ -140,6 +140,7 @@ export default () => {
 
       <button onClick={submitValue}>Submit</button>
       <Form />
+      <CheckboxExample />
     </>
   );
 };
@@ -174,3 +175,50 @@ function Form() {
     </form>
   );
 }
+
+const CheckboxExample = () => {
+  const [checkedItems, setCheckedItems] = useState(true);
+
+  const handleChange = event => {
+    setCheckedItems({
+      ...checkedItems,
+      [event.target.name]: event.target.checked
+    });
+    console.log("checkedItems: ", checkedItems);
+  };
+
+  const checkboxes = [
+    {
+      name: "metal",
+      key: "checkBox1"
+      // value: "metal"
+    },
+    {
+      name: "wood",
+      key: "checkBox2"
+      // value: "wood"
+    }
+  ];
+
+  return (
+    <div>
+      <lable>Checked item name</lable> <br />
+      {checkboxes.map(item => (
+        <label key={item.key}>
+          {item.name}
+          <Checkbox
+            name={item.name}
+            value={item.value}
+            onChange={handleChange}
+          />
+        </label>
+      ))}
+    </div>
+  );
+};
+
+const Checkbox = ({ type = "checkbox", name, value, onChange }) => {
+  console.log("Checkbox: ", name, value);
+
+  return <input type={type} name={name} value={value} onChange={onChange} />;
+};

@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import {
+  AllCheckerCheckbox,
+  Checkbox,
+  CheckboxGroup
+} from "@createnl/grouped-checkboxes";
+// import {
+//   CheckboxGroup,
+//   NoneCheckerCheckbox,
+//   Checkbox
+// } from "@createnl/grouped-checkboxes";
 
 // const HooksForm = () => {
 //   const user = userInputValue("");
@@ -140,19 +150,20 @@ export default () => {
 
       <button onClick={submitValue}>Submit</button>
       <Form />
-      <CheckboxExample />
+      <PermissionsFrom />
     </>
   );
 };
 
 function Form() {
   const [state, setState] = React.useState({
-    hooks: true
+    hooks: "",
+    wood: ""
   });
 
   function handleChange(evt) {
     const value =
-      evt.target.type === "checkbox" ? evt.target.checked : evt.target.type;
+      evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
     setState({
       ...state,
       [evt.target.name]: value
@@ -167,8 +178,18 @@ function Form() {
         <input
           type="checkbox"
           name="hooks"
-          value={state}
+          // value={state}
           checked={state.hooks}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        wood
+        <input
+          type="checkbox"
+          name="wood"
+          // value={wood}
+          checked={state.wood}
           onChange={handleChange}
         />
       </label>
@@ -176,49 +197,72 @@ function Form() {
   );
 }
 
-const CheckboxExample = () => {
-  const [checkedItems, setCheckedItems] = useState(true);
+// const CheckboxExample = () => {
+//   const [checkedItems, setCheckedItems] = useState(true);
 
-  const handleChange = event => {
-    setCheckedItems({
-      ...checkedItems,
-      [event.target.name]: event.target.checked
-    });
-    console.log("checkedItems: ", checkedItems);
+//   const handleChange = event => {
+//     setCheckedItems({
+//       ...checkedItems,
+//       [event.target.name]: event.target.checked
+//     });
+//     console.log("checkedItems: ", checkedItems);
+//   };
+
+//   const checkboxes = [
+//     {
+//       name: "metal",
+//       key: "checkBox1"
+//       // value: "metal"
+//     },
+//     {
+//       name: "wood",
+//       key: "checkBox2"
+//       // value: "wood"
+//     }
+//   ];
+
+//   return (
+//     <div>
+//       <lable>Checked item name</lable> <br />
+//       {checkboxes.map(item => (
+//         <label key={item.key}>
+//           {item.name}
+//           <Checkbox
+//             name={item.name}
+//             value={item.value}
+//             onChange={handleChange}
+//           />
+//         </label>
+//       ))}
+//     </div>
+//   );
+// };
+
+// const Checkbox = ({ type = "checkbox", name, value, onChange }) => {
+//   console.log("Checkbox: ", name, value);
+
+//   return <input type={type} name={name} value={value} onChange={onChange} />;
+// };
+
+const PermissionsFrom = props => {
+  const onCheckboxChange = checkboxes => {
+    console.log(checkboxes);
   };
 
-  const checkboxes = [
-    {
-      name: "metal",
-      key: "checkBox1"
-      // value: "metal"
-    },
-    {
-      name: "wood",
-      key: "checkBox2"
-      // value: "wood"
-    }
-  ];
-
   return (
-    <div>
-      <lable>Checked item name</lable> <br />
-      {checkboxes.map(item => (
-        <label key={item.key}>
-          {item.name}
-          <Checkbox
-            name={item.name}
-            value={item.value}
-            onChange={handleChange}
-          />
-        </label>
-      ))}
-    </div>
+    <CheckboxGroup onChange={console.log}>
+      <label>
+        <Checkbox value="tos" />
+        Terms and Conditions
+      </label>
+      <label>
+        <Checkbox value="privacy-policy" />
+        Privacy Policy
+      </label>
+      <label>
+        <Checkbox value="advertisements" />
+        Advertisements
+      </label>
+    </CheckboxGroup>
   );
-};
-
-const Checkbox = ({ type = "checkbox", name, value, onChange }) => {
-  console.log("Checkbox: ", name, value);
-
-  return <input type={type} name={name} value={value} onChange={onChange} />;
 };

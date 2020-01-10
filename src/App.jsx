@@ -20,8 +20,9 @@ import CrudWoHooks from "./CrudWoHooks/addUserForm";
 import CrudHooks from "./CrudHooks/AddUserForm";
 import Hooks from "./Hooks/Hooksbasic";
 import "./App.css";
-import HooksForm from "./Hooks/Hooksform";
+import { HooksForm } from "./Hooks/Hooksform";
 import HooksTodo from "./Hooks/Hookstodo";
+import Imageslider from "./Hooks/ImageSlider";
 
 const menu = [
   "home",
@@ -44,7 +45,8 @@ const menu = [
   "CrudeHooks",
   "hooks",
   "hooksform",
-  "hookstodo"
+  "hookstodo",
+  "hooksImgSlider"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -78,7 +80,6 @@ class App extends React.Component {
         <BrowserRouter>
           <Navigation menus={menu} />
           <Switch>
-            {" "}
             <Route exact path="/Comment" component={Comment} />
             <Route exact path="/" component={Home} />
             <Route exact path="/compo" component={Compo} />
@@ -98,6 +99,7 @@ class App extends React.Component {
             <Route exact path="/Comment" component={Comment} />
             <Route exact path="/hooks" component={Hooks} />
             <Route exact path="/hooksform" component={HooksForm} />
+            <Route exact path="/hooksImgSlider" component={Imageslider} />
             <Route exact path="/hookstodo" component={HooksTodo} />
             <Route exact path="/CrudeWoHooks" component={CrudWoHooks} />
             <Route exact path="/CrudeHooks" component={CrudHooks} />

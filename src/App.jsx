@@ -8,6 +8,7 @@ import Task from "./Task";
 import Gallery from "./Gallery";
 import Instagram from "./Instagram/Instagram";
 import Form from "./Form";
+import Checkbox from "./Checkbox";
 import Fetch from "./Fetch";
 import Atsemico from "./Atsemico";
 import LocalStorage from "./LocalStorage";
@@ -33,6 +34,7 @@ const menu = [
   "multi-btn",
   "instagram",
   "form",
+  "checkbox",
   "fetch",
   "atsemicolon",
   "RArray",
@@ -89,6 +91,7 @@ class App extends React.Component {
             <Route exact path="/multi-btn" component={Task} />
             <Route exact path="/Instagram" component={Instagram} />
             <Route exact path="/Form" component={Form} />
+            <Route exact path="/checkbox" component={Checkbox} />
             <Route exact path="/Fetch" component={Fetch} />
             <Route exact path="/Atsemicolon" component={Atsemico} />
             <Route exact path="/RArray" component={RArray} />

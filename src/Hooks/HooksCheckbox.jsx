@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const CheckboxOption = () => {
   const [metal, setMetal] = useState(false);
 
-  handleChangeName = ({ event }) => {
+  const handleChangeName = ({ event }) => {
     console.log(event.target.name, event.target.checked);
 
     setMetal({

@@ -23,6 +23,7 @@ import Hooks from "./Hooks/Hooksbasic";
 import "./App.css";
 import { HooksForm } from "./Hooks/Hooksform";
 import HooksTodo from "./Hooks/Hookstodo";
+import Hooksselect from "./Hooks/Hookselectoption";
 import Imageslider from "./Hooks/ImageSlider";
 
 const menu = [
@@ -48,7 +49,8 @@ const menu = [
   "hooks",
   "hooksform",
   "hookstodo",
-  "hooksImgSlider"
+  "hooksImgSlider",
+  "Hooksselect"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -101,6 +103,7 @@ class App extends React.Component {
             <Route exact path="/Redux" component={Redux} />
             <Route exact path="/Comment" component={Comment} />
             <Route exact path="/hooks" component={Hooks} />
+            <Route exact path="/hooksselect" component={Hooksselect} />
             <Route exact path="/hooksform" component={HooksForm} />
             <Route exact path="/hooksImgSlider" component={Imageslider} />
             <Route exact path="/hookstodo" component={HooksTodo} />

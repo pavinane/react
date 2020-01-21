@@ -33,7 +33,7 @@ function TodoForm({ addTodo }) {
         type="text"
         className="input"
         value={value}
-        onChange={e => setValue(e.target.value)}
+        // onChange={e => setValue(e.target.value)}
       />
       <button type="submit" onClick={() => setValue(value)}>
         button

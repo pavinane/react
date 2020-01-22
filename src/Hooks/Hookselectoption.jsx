@@ -6,8 +6,8 @@ import Chess from "../Images/chess.jpeg";
 import Nature from "../Images/nature.jpeg";
 import Rocket from "../Images/rocket.jpeg";
 
-const MainOption = () => {
-  const ImageSwitch = title => {
+class MainGallery extends React.Component {
+  ImageSwitch(title) {
     switch (title) {
       case "mountain":
         return <img src={Mountain} alt="" />;
@@ -21,20 +21,24 @@ const MainOption = () => {
         return <img src={Nature} alt="" />;
       case "rocket":
         return <img src={Rocket} alt="" />;
+      default:
+        return <img src="https://placeimg.com/1000/500/randoms" alt="" />;
     }
-  };
+  }
 
-  const { content } = this.props;
-  return (
-    <div className="main-gallery">
-      <h2>{content}</h2>
-      {ImageSwitch(content)}
-    </div>
-  );
-};
+  render() {
+    const { content } = this.props;
+    return (
+      <div className="main-gallery">
+        <h2>{content}</h2>
+        {this.ImageSwitch(content)}
+      </div>
+    );
+  }
+}
 
-const Option = () => {
-   ImageSwitch  (title,pavi) { 
+const OptionGallery = () => {
+  const ImageSwitch = (title, pavi) => {
     switch (title) {
       case "mountain":
         return <img src={Mountain} onClick={() => pavi(title)} alt="" />;
@@ -48,32 +52,44 @@ const Option = () => {
         return <img src={Nature} onClick={() => pavi(title)} alt="" />;
       case "rocket":
         return <img src={Rocket} onClick={() => pavi(title)} alt="" />;
+      default:
+        return <img src="https://placeimg.com/1000/500/randoms" alt="" />;
     }
   };
-
-  const { title, pavi } = this.props;
-  return ImageSwitch(title, pavi);
 };
 
-const Selectoption = () => {
-  const [gallerySelected, setGallerySelected] = useState("");
+const Gallery = () => {
+  const [gallerySelected, setGallerySelected] = useState("nane");
 
   const changeTitle = d => setGallerySelected(() => ({ gallerySelected: d }));
 
   return (
     <div className="gallery">
-      <MainOption content={gallerySelected} />
+      <MainGallery content={gallerySelected} />
       <div className="option-gallery">
-        <Option title="mountain" pavi={changeTitle} />
-        <Option title="beach" pavi={changeTitle} />
-        <Option title="king" pavi={changeTitle} />
-        <Option title="chess" pavi={changeTitle} />
-        <Option title="nature" pavi={changeTitle} />
-
-        <Option title="rocket" pavi={changeTitle} />
+        <select>
+          <option>
+            <OptionGallery title="mountain" pavi={changeTitle} />
+          </option>
+          <option>
+            <OptionGallery title="beach" pavi={changeTitle} />
+          </option>
+          <option>
+            <OptionGallery title="king" pavi={changeTitle} />
+          </option>
+          <option>
+            <OptionGallery title="chess" pavi={changeTitle} />
+          </option>
+          <option>
+            <OptionGallery title="nature" pavi={changeTitle} />
+          </option>
+          <option>
+            <OptionGallery title="rocket" pavi={changeTitle} />
+          </option>
+        </select>
       </div>
     </div>
   );
 };
 
-export default Selectoption;
+export default Gallery;

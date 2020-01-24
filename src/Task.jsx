@@ -5,6 +5,7 @@ class Task extends React.Component {
     text: ""
   };
   click = num => {
+    console.log(num);
     this.setState({ text: num });
   };
 

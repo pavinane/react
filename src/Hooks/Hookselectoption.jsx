@@ -27,6 +27,7 @@ class SelectOption extends React.Component {
           <DisplayOption selecting={selected} />
         </div>
         <Topmention />
+        <Tickbox />
       </div>
     );
   }
@@ -58,7 +59,7 @@ const DisplayOption = ({ selecting }) => {
 };
 
 const Topmention = () => {
-  const [display, setDisplay] = useState("jhjh");
+  const [display, setDisplay] = useState("");
   const [option, SetOption] = useState(true);
 
   const showButton = n => {
@@ -140,3 +141,64 @@ const Color = () => {
     </div>
   );
 };
+
+const CheckedBox = ({ add, remove }) => {
+  const [click, setClick] = useState(false);
+
+  const Clicked = e => {
+    console.log(e.target.name, e.target.checked);
+    setClick({
+      [e.target.name]: e.target.value
+    });
+    if (e.target.checked) {
+      add(e.target.name);
+    } else {
+      remove(e.target.name);
+    }
+  };
+
+  return (
+    <>
+      <label>
+        <input type="checkbox" name="box1" value={click} onChange={Clicked} />
+        box 1
+      </label>
+      <label>
+        <input type="checkbox" name="box2" value={click} onChange={Clicked} />
+        box2
+      </label>
+      <label>
+        <input type="checkbox" name="box3" value={click} onChange={Clicked} />
+        box3
+      </label>
+      <label>
+        <input type="checkbox" name="box2" value={click} onChange={Clicked} />
+        box4
+      </label>
+      <label>
+        <input type="checkbox" name="box3" value={click} onChange={Clicked} />
+        box5
+      </label>
+    </>
+  );
+};
+class Tickbox extends React.Component {
+  state = {
+    selected: []
+  };
+  addSelected = select =>
+    this.setState(({ selected }) => ({ selected: [...selected, select] }));
+  removeSelected = select =>
+    this.setState({ selected: this.state.selected.filter(s => s !== select) });
+
+  render() {
+    console.log(this.state.selected);
+    return (
+      <>
+        <h3>Material</h3>
+        <CheckedBox add={this.addSelected} remove={this.removeSelected} />
+        {this.state.selected && this.state.selected.map(s => <p>{s}</p>)}
+      </>
+    );
+  }
+}

@@ -9,8 +9,12 @@ const Todo = ({ todo, index, completeTodo, removeTodo }) => {
       {todo.text}
 
       <div>
-        <button onClick={() => completeTodo(index)}>Complete</button>
-        <button onClick={() => removeTodo(index)}>x</button>
+        <button type="button" onClick={() => completeTodo(index)}>
+          Complete
+        </button>
+        <button type="button" onClick={() => removeTodo(index)}>
+          x
+        </button>
       </div>
     </div>
   );
@@ -50,18 +54,18 @@ function App() {
     }
   ]);
 
-  const addTodo = text => {
+  const addTodo = ({ text }) => {
     const newTodos = [...todos, { text }];
     setTodos(newTodos);
   };
 
-  const completeTodo = index => {
+  const completeTodo = ({ index }) => {
     const newTodos = [...todos];
     newTodos[index].isCompleted = true;
     setTodos(newTodos);
   };
 
-  const removeTodo = index => {
+  const removeTodo = ({ index }) => {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);

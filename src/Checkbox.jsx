@@ -8,9 +8,9 @@ class CheckBoxOptions extends Component {
   };
 
   handleChangeName = event => {
-    console.log(event.target.name, event.target.checked);
+    console.log(event.target.name, event.target.value);
     this.setState({
-      [event.target.name]: event.target.checked
+      [event.target.name]: event.target.value
     });
     if (event.target.checked) {
       this.props.add(event.target.name);
@@ -27,7 +27,7 @@ class CheckBoxOptions extends Component {
           <input
             type="checkbox"
             name="metal"
-            checked={metal}
+            value={metal}
             onChange={this.handleChangeName}
           />
           Metal
@@ -36,7 +36,7 @@ class CheckBoxOptions extends Component {
           <input
             type="checkbox"
             name="wood"
-            checked={wood}
+            value={wood}
             onChange={this.handleChangeName}
           />
           Wood
@@ -45,7 +45,7 @@ class CheckBoxOptions extends Component {
           <input
             type="checkbox"
             name="plastic"
-            checked={plastic}
+            value={plastic}
             onChange={this.handleChangeName}
           />
           Plastic

@@ -29,7 +29,6 @@ export class CommentSelectUser extends Component {
   }
 }
 
-
 export class CommentInputForm extends Component {
   state = {
     comment: "",
@@ -129,10 +128,4 @@ export class CommentsCard extends Component {
       </div>
     );
   }
-}
-
-export class UserLike extends Component {
-  state = {
-    heart: []
-  };
 }

@@ -25,6 +25,7 @@ import { HooksForm } from "./Hooks/Hooksform";
 import HooksTodo from "./Hooks/Hookstodo";
 import Hooksselect from "./Hooks/Hookselectoption";
 import Imageslider from "./Hooks/ImageSlider";
+import RangeSlider from "./RangerSlider/Rangeslider";
 
 const menu = [
   "home",
@@ -50,7 +51,8 @@ const menu = [
   "hooksform",
   "hookstodo",
   "hooksImgSlider",
-  "Hooksselect"
+  "Hooksselect",
+  "Rangeslider"
 ];
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -108,7 +110,7 @@ class App extends React.Component {
             <Route exact path="/hooksImgSlider" component={Imageslider} />
             <Route exact path="/hookstodo" component={HooksTodo} />
             <Route exact path="/CrudeWoHooks" component={CrudWoHooks} />
-
+            <Route exact path="/RangeSlider" component={RangeSlider} />
             <Route exact path="/CrudeHooks" component={CrudHooks} />
           </Switch>
         </BrowserRouter>

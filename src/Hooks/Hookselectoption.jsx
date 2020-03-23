@@ -155,6 +155,9 @@ const CheckedBox = ({ add, remove }) => {
     } else {
       remove(e.target.name);
     }
+    // {
+    //   e.target.checked ? add(e.target.value) : remove(e.target.value);
+    // }
   };
 
   return (
@@ -172,11 +175,11 @@ const CheckedBox = ({ add, remove }) => {
         box3
       </label>
       <label>
-        <input type="checkbox" name="box2" value={click} onChange={Clicked} />
+        <input type="checkbox" name="box4" value={click} onChange={Clicked} />
         box4
       </label>
       <label>
-        <input type="checkbox" name="box3" value={click} onChange={Clicked} />
+        <input type="checkbox" name="box5" value={click} onChange={Clicked} />
         box5
       </label>
     </>
@@ -186,6 +189,7 @@ class Tickbox extends React.Component {
   state = {
     selected: []
   };
+
   addSelected = select =>
     this.setState(({ selected }) => ({ selected: [...selected, select] }));
   removeSelected = select =>
@@ -195,9 +199,8 @@ class Tickbox extends React.Component {
     console.log(this.state.selected);
     return (
       <>
-        <h3>Material</h3>
+        <h3>tick the box</h3>
         <CheckedBox add={this.addSelected} remove={this.removeSelected} />
-        {this.state.selected && this.state.selected.map(s => <p>{s}</p>)}
       </>
     );
   }
